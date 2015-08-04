@@ -6,4 +6,8 @@ As a Elasticsearch lover, my goal is to build a living documentation with lots o
 
 Please feel free to contact me for any question, suggestion at ahaduzzaman.munna@gmail.com.
 
+Documentation
+--------------
+[Control your search result order] ((http://github.com/data/learn_elasticsearch_from_example/blob/master/docs/ControlYourSearchResult.md))
+
 
