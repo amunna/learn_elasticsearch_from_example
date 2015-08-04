@@ -30,7 +30,7 @@ Suppose we have an index called people where we have various information of peop
 		                    ]
 		                }
 		            },
-		            "boost": 50,
+		            "boost": 60,
 		            "score_mode": "multiply",
 		            "boost_mode": "multiply",
 		            "functions": [
@@ -49,7 +49,7 @@ Suppose we have an index called people where we have various information of peop
 		                            ]
 		                        }
 		                    },
-		                    "boost_factor": 4
+		                    "boost_factor": 6
 		                }
 		            ]
 		        }
@@ -78,7 +78,7 @@ Suppose we have an index called people where we have various information of peop
 		                    ]
 		                }
 		            },
-		            "boost": 50,
+		            "boost": 60,
 		            "score_mode": "multiply",
 		            "boost_mode": "multiply",
 		            "functions": [
@@ -97,7 +97,7 @@ Suppose we have an index called people where we have various information of peop
 		                            ]
 		                        }
 		                    },
-		                    "boost_factor": 4
+		                    "boost_factor": 6
 		                }
 		            ]
 		        }
