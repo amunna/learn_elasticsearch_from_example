@@ -8,6 +8,6 @@ Please feel free to contact me for any question, suggestion at ahaduzzaman.munna
 
 Documentation
 --------------
-[Control your search result order] (http://github.com/data/learn_elasticsearch_from_example/blob/master/docs/ControlYourSearchResult.md)
+[Control your search result order] (https://github.com/amunna/learn_elasticsearch_from_example/blob/master/docs/ControlYourSearchResult.md)
 
 
