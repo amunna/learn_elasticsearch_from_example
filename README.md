@@ -1,4 +1,4 @@
-# Learn Elasticsearch From Example
+# Learn Elasticsearch From Examples
 ====================================
 
 We all love elasticsearch. Don't we? Elasticsearch (https://www.elastic.co/) is growing like crazy but unfortunately the documentation lacks concrete examples and little harder for people to formulate a query quickly.

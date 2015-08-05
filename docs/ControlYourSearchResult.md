@@ -6,11 +6,12 @@ Suppose we have an index called people where we have various information of peop
 
 1. Let's assume peoples' age range is between 1 and 120. Show the result result in the following order
 
-        - Age between 25 and 40 and who live in Austin (both condition matches)
+        - Age between 25 and 40 and who live in Austin (both conditions match)
         - Age not in between 25 and 40 but who live in Austin (city matches but not age)
         - Age between 25 and 40 but who do not live in Austin (age matches but not city)
         - Age not in between 25 and 40 and who do not live in Austin (neither matches)
 
+         $curl -XPOST 'localhost:9200/people/info/_search' -d '
          {
              "query": {
                  "function_score": {
@@ -54,14 +55,14 @@ Suppose we have an index called people where we have various information of peop
                      ]
                  }
              }
-         }
+         }'
 
 2. Show the result in the following order where living in Austin is a must
 
-        - Age between 25 and 40 and who live in Austin (both condition matches)
+        - Age between 25 and 40 and who live in Austin (both conditions match)
         - Age not in between 25 and who live in Austin (city matches but not age)
 
-
+         $curl -XPOST 'localhost:9200/people/info/_search' -d '
          {
              "query": {
                  "function_score": {
@@ -102,14 +103,14 @@ Suppose we have an index called people where we have various information of peop
                      ]
                  }
              }
-         }
+         }'
 
 3. Show the result in the following order where living in Austin is a must
 
-        - Age less than 25 and who live in Austin (both condition matches)
+        - Age less than 25 and who live in Austin (both conditions match)
         - Age greater than or equal to 25 and who live in Austin (city matches but not age)
 
-
+         $curl -XPOST 'localhost:9200/people/info/_search' -d '
          {
              "query": {
                  "function_score": {
@@ -149,14 +150,14 @@ Suppose we have an index called people where we have various information of peop
                      ]
                  }
              }
-         }
+         }'
 
 4. Show the result in the following order where living in Austin is a must
 
-        - Age greater than 25 and who live in Austin (both condition matches)
+        - Age greater than 25 and who live in Austin (both conditions match)
         - Age less than or equal to 25 and who live in Austin (city matches but not age)
 
-
+         $curl -XPOST 'localhost:9200/people/info/_search' -d '
          {
              "query": {
                  "function_score": {
@@ -196,17 +197,18 @@ Suppose we have an index called people where we have various information of peop
                      ]
                  }
              }
-         }
+         }'
 
 
 
 5. Show the result in the following order (Example of how to use regular expression query)
 
-		- Name has "awesome" word and who live in Austin (both condition matches)
+		- Name has "awesome" word and who live in Austin (both conditions match)
         - Name does not have "awesome" word but who live in Austin (city matches but not name)
         - Name has "awesome" word but who do not live in Austin (name matches but not city)
         - Name does not have "awesome" word and who do not live in Austin (neither matches)
 
+	    $curl -XPOST 'localhost:9200/people/info/_search' -d '
 	    {
 	        "query": {
 	            "function_score": {
@@ -249,16 +251,17 @@ Suppose we have an index called people where we have various information of peop
 	                ]
 	            }
 	        }
-	    }
+	    }'
 
 
 6. Show the result in the following order (Example of how to use term query)
 
-		- Has car "Honda" and who live in Austin (both condition matches)
+		- Has car "Honda" and who live in Austin (both conditions match)
         - Doesn't have car "Honda" but who live in Austin (city matches but not car)
         - Has car "Honda" but who do not live in Austin (car matches but not city)
         - Doesn't have car "Honda" and who do not live in Austin (neither matches)
 
+	    $curl -XPOST 'localhost:9200/people/info/_search' -d '
 	    {
 	        "query": {
 	            "function_score": {
@@ -301,7 +304,7 @@ Suppose we have an index called people where we have various information of peop
 	                ]
 	            }
 	        }
-	    }
+	    }'
 
 
 
