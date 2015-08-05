@@ -4,7 +4,7 @@
 
 Suppose we have an index called people where we have various information of people, for example age, name, etc.
 
-1. Let's assume peoples' age range is between 1 and 120. Show the result result in the following order
+1. Let's assume peoples' age range is between 1 and 120. Show the result in the following order
 
         - Age between 25 and 40 and who live in Austin (both conditions match)
         - Age not in between 25 and 40 but who live in Austin (city matches but not age)
